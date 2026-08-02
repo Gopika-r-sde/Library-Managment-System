@@ -64,7 +64,7 @@ public class BooksService {
 
         Optional<Books> recBooks = booksDao.getBookById(id);
 
-        if (!recBooks.isPresent()) {
+        if (recBooks.isPresent()) {
             Books existBook = recBooks.get();
             existBook.setTitle(books.getTitle());
             existBook.setAuthor(books.getAuthor());
