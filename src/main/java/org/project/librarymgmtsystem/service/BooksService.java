@@ -30,7 +30,7 @@ public class BooksService {
     }
 
     // Get All Books (Listing)
-    public ResponseEntity<ResponseStructure<List<Books>>> getAllBooks(Books books) {
+    public ResponseEntity<ResponseStructure<List<Books>>> getAllBooks() {
         ResponseStructure<List<Books>> structure = new ResponseStructure<>();
         List<Books> recBooks = booksDao.getAllBooks();
         if (!recBooks.isEmpty()) {
